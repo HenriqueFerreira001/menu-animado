@@ -1,0 +1,105 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color:#2980b9;
+    --text-color: #ecf0f1;
+    --text-secondary-color:#000f1f;
+    --background-color: #34495e;
+}
+body{
+    margin: none;
+    padding: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--text-color);
+ ;
+    
+}
+.menu-lateral{
+    position: fixed;
+    left: -300%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; 
+}
+.menu-lateral.ativo{
+    left: 0;
+}
+.menu-lateral ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+
+}
+.menu-lateral ul li{
+    padding: 15px 30px;
+
+}
+.menu-lateral ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu-lateral ul li a i{
+    font-size: 24px;
+}
+.menu-lateral ul li:hover{
+    background-color: var(--secondary-color);
+}
+.menu-lateral ul li a i:hover{
+    transform: translateX(5px) rotate(5deg);
+}
+.button-menu{
+    background-color: var(--primary-color);
+    position: fixed;
+    position: fixed ;
+    left: 20px;
+    top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 6;
+    transition:  all 0.5 ease-in-out;
+
+}
+.button-menu:hover{
+    background-color: var(--secondary-color);
+}
+.button-menu.ativo{
+    left: 380px;
+}
+.conteudo{
+    margin-left: 80px;
+    padding: 40px;
+    color: var(--text-secondary-color);
+    background-color: var(--text-color);
+    transition: all background-color 05s ease ;
+
+}
+.conteudo.ativo{
+    margin-left: 320px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.background{    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+.background.ativo{
+    opacity: 1;
+    visibility: visible;
+}
